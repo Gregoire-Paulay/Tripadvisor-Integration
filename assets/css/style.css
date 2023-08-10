@@ -1,0 +1,462 @@
+/* ---------- GÉNÉRAL ---------- */
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: gray;
+  font-family: "TS-Reg", sans-serif;
+}
+
+.container {
+  max-width: 1135px;
+  margin: 0 auto;
+  height: 100%;
+  background-color: white;
+}
+
+h1 {
+  font-size: 54px;
+  line-height: 65px;
+  margin-bottom: 10px;
+  font-family: "TS-Med", sans-serif;
+}
+h3 {
+  font-size: 28px;
+  font-family: "TS-Med", sans-serif;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: "TS-Med", sans-serif;
+}
+h5 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+/*-------------------------------------------*/
+/*-------------- HEADER ---------------------*/
+/*-------------------------------------------*/
+header {
+  background-color: white;
+  height: 60px;
+  /* position: fixed; */
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+  /* border: 1px solid red;*/
+}
+header img {
+  width: 190px;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav :is(a, button) {
+  border-radius: 20px;
+  padding: 7px 10px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: black;
+}
+header nav a:hover {
+  background-color: #dcd8d8;
+}
+
+header button {
+  color: white;
+  background-color: black;
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+header .hidden {
+  display: none;
+}
+/*-------------------------------------------*/
+/*-------------- Main -----------------------*/
+/*-------------------------------------------*/
+
+main {
+  margin-top: 110px;
+}
+
+h1 > span {
+  color: #fd5d5d;
+}
+h1 + p {
+  font-size: 14px;
+  line-height: 17px;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+  line-height: 20px;
+  /* position: fixed;
+  background-color: white;
+  width: 64.6vw; */
+}
+.menu > div {
+  display: flex;
+  width: calc((100% - 50px) / 6);
+  border: 1px solid black;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 15px;
+}
+.menu div:hover {
+  color: white;
+  background-color: black;
+}
+.menu .hidden {
+  display: none;
+}
+/*---------- Section Img-bloc ----------*/
+.img-bloc {
+  height: 430px;
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  gap: 2px;
+}
+
+.img-bloc > div:first-child {
+  height: 100%;
+  flex: 1;
+}
+.img-bloc div:last-child {
+  height: 100%;
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.img-bloc img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-bloc > div:last-child img {
+  height: calc((100% - 2px) / 2);
+}
+
+/*---------- Section Location ----------*/
+.breadcrumb-bloc {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+/*--------- Section Description-bloc ---------*/
+.description-bloc {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.description-bloc > div {
+  width: 50%;
+}
+.description-bloc > div > p {
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 24px;
+  color: #333333;
+}
+.description-bloc aside {
+  width: 40%;
+  background-color: #fd5d5d;
+  margin-top: 40px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+aside h3 {
+  padding: 30px 75px 0px 30px;
+}
+aside p {
+  padding: 0 30px;
+}
+.description-bloc button {
+  width: 180px;
+  color: white;
+  padding: 20px;
+  background-color: rgb(61, 60, 60);
+  margin: 20px 30px;
+  border-radius: 20px;
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.description-bloc img {
+  object-fit: fill;
+  padding-bottom: 15px;
+  background-color: #f2f2f2;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/*---------- Section Unmissable ----------*/
+.unmissable {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.unmissable > div {
+  display: flex;
+  /* border: 3px solid red; */
+  gap: 15px;
+  overflow: hidden;
+}
+.first-col {
+  width: 270px;
+}
+
+.unmissable p {
+  font-size: 18px;
+  line-height: 22px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 15px;
+  color: #333333;
+}
+.unmissable a {
+  text-decoration: underline;
+  color: black;
+  font-size: 16px;
+  font-family: TS-Med, sans-serif;
+}
+
+.scroll {
+  display: flex;
+  /* border: 1px solid black; */
+  gap: 15px;
+  overflow: scroll hidden;
+  flex: 1;
+}
+.scroll > div {
+  width: calc((100% - 32px) / 3);
+  flex-shrink: 0;
+  /* border: 2px solid blue; */
+  position: relative;
+}
+
+.scroll img {
+  aspect-ratio: 270/200;
+  width: 100%;
+  object-fit: cover;
+}
+.scroll i {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+.rating {
+  display: flex;
+  height: 20px;
+}
+.rating img {
+  object-fit: fill;
+  height: 100%;
+  width: 60px;
+}
+.rating p {
+  margin-left: 10px;
+  font-size: 12px;
+}
+.scroll > div > p {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/*-------------------------------------------*/
+/*-------------- FOOTER ---------------------*/
+/*-------------------------------------------*/
+
+footer {
+  height: 200px;
+  background-color: #faf1ed;
+  margin-top: 50px;
+}
+footer .container {
+  background-color: #faf1ed;
+}
+
+footer img {
+  height: 50px;
+  border-radius: 50px;
+}
+footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer span {
+  font-family: TS-Med, sans-serif;
+}
+
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* ------------ MEDIA QUERY ------------- */
+/* -------------------------------------- */
+/* -------------------------------------- */
+
+@media (max-width: 1184px) {
+  .container {
+    background-color: pink;
+    padding: 0px 25px;
+  }
+  .menu {
+    flex-wrap: wrap;
+  }
+  .menu div {
+    width: calc((100% - 35px) / 4);
+  }
+  .menu .hidden {
+    display: flex;
+  }
+
+  .img-bloc {
+    height: 372px;
+  }
+}
+
+/* ------------- MEDIA 1024 -------------- */
+
+@media (max-width: 1024px) {
+  .container {
+    background-color: greenyellow;
+  }
+  header nav span {
+    display: none;
+  }
+
+  .img-bloc {
+    height: 275px;
+  }
+  .img-bloc > div:first-child {
+    width: 66.6%;
+  }
+  .img-bloc div:last-child {
+    width: 33.3%;
+  }
+
+  .scroll > div {
+    width: calc((100% - 32px) / 2.35);
+  }
+}
+
+/* ------------- MEDIA 768 -------------- */
+
+@media (max-width: 768px) {
+  .container {
+    background-color: lightcoral;
+  }
+  header .container {
+    padding: 0 25px;
+  }
+  header nav {
+    display: none;
+  }
+  header img {
+    width: 133px;
+  }
+  header .hidden {
+    display: inline;
+  }
+  header .hidden a {
+    text-decoration: none;
+    color: black;
+  }
+  header .container .hidden {
+    display: flex;
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 40px;
+    padding: 0 25px;
+  }
+  h1 + p {
+    padding: 0 25px;
+  }
+  .menu {
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    height: 60px;
+    overflow: scroll hidden;
+  }
+  .menu div {
+    flex-shrink: 0;
+    height: 30px;
+    min-width: 150px;
+    width: fit-content;
+    align-items: center;
+    gap: 10px;
+  }
+  .img-bloc > div:first-child {
+    width: 100%;
+  }
+  .img-bloc div:last-child {
+    display: none;
+  }
+  .container {
+    padding: 0;
+  }
+  .breadcrumb-bloc {
+    display: none;
+  }
+
+  .description-bloc > div {
+    width: 100%;
+    padding: 0 24px;
+  }
+  .description-bloc > div > p {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .description-bloc aside {
+    display: none;
+  }
+
+  h3 {
+    padding-left: 25px;
+    margin-bottom: 25px;
+  }
+  .unmissable > div {
+    display: inline;
+    padding: 0 25px;
+  }
+  .first-col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .scroll > div {
+    width: calc((100 - 32px) / 2);
+  }
+  .scroll > div > img {
+    object-fit: fill;
+  }
+}
