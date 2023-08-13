@@ -6,10 +6,13 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/font.css" />
+
     <script
       src="https://kit.fontawesome.com/83027724c9.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/JS/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
     <title>Tripadvisor</title>
   </head>
 
@@ -19,7 +22,7 @@
     <!-- /*-------------------------------------------*/ -->
     <header>
       <div class="container">
-        <i class="fa-solid fa-bars hidden"></i>
+        <i class="fa-solid fa-bars visible-XS"></i>
         <img src="./assets/img/Logo.svg" alt="Logo Tripadvisor" />
         <nav>
           <a href="#"><i class="fa-solid fa-pencil"></i> <span>Avis</span></a>
@@ -29,12 +32,13 @@
           <a href="#">
             <i class="fa-regular fa-bell"></i> <span>Alertes</span></a
           >
-          <button>Connectez-vous</button>
+          <button class="btn-signup">Connectez-vous</button>
+
           <a href="#"
             ><i class="fa-solid fa-basket-shopping"></i> <span>Panier</span></a
           >
         </nav>
-        <div class="hidden">
+        <div class="visible-XS">
           <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
           <a href="#"> <i class="fa-solid fa-basket-shopping"></i></a>
         </div>
@@ -64,10 +68,10 @@
           <div>
             <span>Forums de voyage</span><i class="fa-regular fa-comment"></i>
           </div>
-          <div class="hidden">
+          <div class="visible-M">
             <span>Vols</span><i class="fa-solid fa-plane"></i>
           </div>
-          <div class="hidden">
+          <div class="visible-M">
             <span>Croisière</span><i class="fa-solid fa-ship"></i>
           </div>
           <div><span>Plus</span><i class="fa-solid fa-ellipsis"></i></div>
@@ -262,14 +266,55 @@
       </div>
     </main>
 
+    <!-- /*-------------------------------------------*/ -->
+    <!-- /*---------------- FOOTER -------------------*/ -->
+    <!-- /*-------------------------------------------*/ -->
+
     <footer>
       <div class="container">
         <img src="./assets/img/Mini-Logo.jpg" alt="" />
         <p>
-          Made at <span>Le Reacteur</span> by <span>Grégoire Paulay</span> -
+          Made at <a href="https://www.lereacteur.io">Le Reacteur</a> by
+          <a href="https://github.com/Gregoire-Paulay">Grégoire Paulay</a> -
           2023
         </p>
       </div>
     </footer>
+
+    <div id="modal">
+      <div class="form-modal">
+        <div>
+          <i class="fa-solid fa-xmark"></i>
+          <img src="./assets/img/Mini-Logo.jpg" alt="Logo Tripadvisor" />
+
+          <h4>Formulaire de contact</h4>
+
+          <form>
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              placeholder="Prénom"
+            />
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              placeholder="Nom"
+            />
+            <input type="email" name="email" id="email" placeholder="Email" />
+            <input type="text" name="sujet" id="sujet" placeholder="Sujet" />
+            <textarea
+              name="message"
+              id="message"
+              cols="48"
+              rows="10"
+              placeholder="Message"
+            ></textarea>
+            <button>Envoyer le formulaire</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
