@@ -41,6 +41,13 @@ h5 {
   font-size: 18px;
   margin: 5px 0;
 }
+
+img {
+  cursor: pointer;
+}
+img:hover {
+  opacity: 0.8;
+}
 /*-------------------------------------------*/
 /*-------------- HEADER ---------------------*/
 /*-------------------------------------------*/
@@ -113,9 +120,15 @@ h1 + p {
   display: flex;
   gap: 10px;
   line-height: 20px;
-  /* position: fixed;
+  /* right: 0;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  border-bottom: 1px solid lightgray;
+  position: fixed;
   background-color: white;
-  width: 64.6vw; */
+  width: 1024px;
+  margin: 0 auto; */
 }
 .menu > div {
   display: flex;
@@ -213,6 +226,11 @@ aside p {
   border: none;
   font-size: inherit;
   font-family: inherit;
+  cursor: pointer;
+}
+
+.description-bloc button:hover {
+  background-color: black;
 }
 
 .description-bloc img {
@@ -324,6 +342,10 @@ aside p {
   background-color: white;
   padding: 10px;
   border-radius: 50%;
+  cursor: pointer;
+}
+.scroll .fa-heart:hover {
+  background-color: lightgray;
 }
 
 .rating span {
