@@ -45,9 +45,6 @@ h5 {
 img {
   cursor: pointer;
 }
-img:hover {
-  opacity: 0.8;
-}
 /*-------------------------------------------*/
 /*-------------- HEADER ---------------------*/
 /*-------------------------------------------*/
@@ -120,15 +117,11 @@ h1 + p {
   display: flex;
   gap: 10px;
   line-height: 20px;
-  /* right: 0;
-  left: 0;
+  position: sticky;
   top: 0;
-  z-index: 2;
-  border-bottom: 1px solid lightgray;
-  position: fixed;
   background-color: white;
-  width: 1024px;
-  margin: 0 auto; */
+  padding-bottom: 2px;
+  z-index: 2;
 }
 .menu > div {
   display: flex;
@@ -170,6 +163,9 @@ h1 + p {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+.img-bloc img:hover {
+  opacity: 0.8;
 }
 
 .img-bloc > div:last-child img {
@@ -254,6 +250,9 @@ aside p {
   object-fit: cover;
   border-radius: 10px;
 }
+.partner img:hover {
+  opacity: 0.8;
+}
 .partner > div {
   display: flex;
   gap: 7px;
@@ -302,7 +301,7 @@ aside p {
   width: 270px;
 }
 
-.unmissable p {
+.first-col p {
   font-size: 18px;
   line-height: 22px;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -315,6 +314,9 @@ aside p {
   font-size: 16px;
   font-family: TS-Med, sans-serif;
 }
+.unmissable a:hover {
+  opacity: 0.8;
+}
 
 .scroll {
   display: flex;
@@ -322,6 +324,10 @@ aside p {
   gap: 15px;
   overflow: scroll hidden;
   flex: 1;
+  cursor: pointer;
+}
+h5:hover {
+  text-decoration: underline;
 }
 .scroll > div {
   width: calc((100% - 32px) / 3);
@@ -334,6 +340,9 @@ aside p {
   aspect-ratio: 270/200;
   width: 100%;
   object-fit: cover;
+}
+.scroll img:hover {
+  opacity: 0.8;
 }
 .scroll .fa-heart {
   position: absolute;
@@ -360,25 +369,25 @@ aside p {
 /* ------------ Section Tourism ------------ */
 .tourism > div {
   display: flex;
-  /* width: calc((100% - 30px) / 3); */
+  flex-shrink: 0;
   gap: 15px;
   overflow: scroll hidden;
+  cursor: pointer;
 }
-.tourism > div > div {
-  width: calc((100% - 30px) / 4);
+.tourism > div:first-of-type > div {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 5px;
+  width: calc((100% - 45px) / 4);
 }
 .tourism img {
   aspect-ratio: 1;
-
-  width: 100%;
-  flex-shrink: 0;
   object-fit: cover;
 }
-
+.tourism img:hover {
+  opacity: 0.8;
+}
 .fa-circle {
   color: green;
 }
@@ -574,7 +583,7 @@ form button:active {
   }
 }
 
-.tourism > div > div {
+.tourism > div:first-of-type > div {
   width: calc((100% - 20px) / 3);
 }
 
@@ -665,9 +674,13 @@ form button:active {
     margin-bottom: 30px;
   }
   .scroll > div {
-    width: calc((100% - 20px) / 2.6);
+    width: calc((100% - 20px) / 1.2);
   }
-}
-.tourism > div > div {
-  width: calc((100% - 20px) / 2.8);
+
+  .tourism {
+    margin: 0px 25px;
+  }
+  .tourism > div:first-of-type > div {
+    width: calc((100% - 20px) / 1.5);
+  }
 }
